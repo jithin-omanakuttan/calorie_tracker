@@ -1,0 +1,145 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5525551686764216896",
+      "lastPropertyId": "5:93815004487389140",
+      "name": "ItemEntity",
+      "properties": [
+        {
+          "id": "1:4163784211644887543",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:730359701641279739",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:8196047392969286379",
+          "name": "quantity",
+          "type": 6
+        },
+        {
+          "id": "4:7371321660112577791",
+          "name": "details",
+          "type": 9
+        },
+        {
+          "id": "5:93815004487389140",
+          "name": "mealId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:400723080546916043",
+          "relationTarget": "MealEntity"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:4745339621366622546",
+      "lastPropertyId": "4:1487034146492212923",
+      "name": "MealEntity",
+      "properties": [
+        {
+          "id": "1:2148589850392042147",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4583610515793528461",
+          "name": "mealType",
+          "type": 9
+        },
+        {
+          "id": "3:4091984566338867779",
+          "name": "date",
+          "type": 10
+        },
+        {
+          "id": "4:1487034146492212923",
+          "name": "totalsId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:819731068130855629",
+          "relationTarget": "TotalsEntity"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:5520597455904925133",
+          "name": "items",
+          "targetId": "1:5525551686764216896"
+        }
+      ]
+    },
+    {
+      "id": "3:8816944756537336257",
+      "lastPropertyId": "8:9200375209572801144",
+      "name": "TotalsEntity",
+      "properties": [
+        {
+          "id": "1:5640758913491779225",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4917463859342706761",
+          "name": "calories",
+          "type": 6
+        },
+        {
+          "id": "3:5632030304026680750",
+          "name": "proteinG",
+          "type": 8
+        },
+        {
+          "id": "4:4461713343755077471",
+          "name": "fatG",
+          "type": 8
+        },
+        {
+          "id": "5:8944829806303820764",
+          "name": "carbohydratesG",
+          "type": 8
+        },
+        {
+          "id": "6:3220467510324416036",
+          "name": "fiberG",
+          "type": 8
+        },
+        {
+          "id": "7:7351568410090988055",
+          "name": "sugarG",
+          "type": 8
+        },
+        {
+          "id": "8:9200375209572801144",
+          "name": "mealId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:1344664409450701390",
+          "relationTarget": "MealEntity"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:8816944756537336257",
+  "lastIndexId": "3:1344664409450701390",
+  "lastRelationId": "1:5520597455904925133",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
