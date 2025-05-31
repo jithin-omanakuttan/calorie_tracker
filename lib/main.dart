@@ -4,6 +4,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'db/objectbox.dart';
 import 'screens/chat_screen.dart';
+import 'theme.dart';
+
 late Store store;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,9 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Calorie Chat',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppTheme.lightTheme,
       home: const ChatScreen(),
     );
   }
