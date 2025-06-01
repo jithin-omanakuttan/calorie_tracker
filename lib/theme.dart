@@ -1,39 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'constants/colors.dart';
 
 class AppTheme {
   static ThemeData get lightTheme => ThemeData(
-        primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.blue,
-          foregroundColor: Colors.white,
-          elevation: 2,
+        scaffoldBackgroundColor: AppColors.darkNavy,
+        primaryColor: AppColors.deepPurple,
+        colorScheme: const ColorScheme.dark(
+          primary: AppColors.deepPurple,
+          secondary: AppColors.mintGreen,
+          surface: AppColors.darkNavy,
+          onPrimary: Colors.white,
+          onSecondary: Colors.black,
         ),
-        cardTheme: const CardThemeData(
-          color: Colors.white,
-          elevation: 2,
-          margin: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12)),
+        textTheme: GoogleFonts.poppinsTextTheme(
+          ThemeData.dark().textTheme,
+        ),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: AppColors.deepPurple,
+          elevation: 0,
+          centerTitle: true,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: AppColors.mintGreen,
+            foregroundColor: Colors.black,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
           ),
         ),
-        inputDecorationTheme: const InputDecorationTheme(
-          border: OutlineInputBorder(),
-          hintStyle: TextStyle(color: Colors.grey),
-        ),
-        dividerTheme: const DividerThemeData(
-          color: Colors.grey,
-          thickness: 1,
-        ),
-        iconTheme: const IconThemeData(color: Colors.blue),
-        textTheme: const TextTheme(
-          bodyMedium: TextStyle(color: Colors.black87, fontSize: 16),
-          bodySmall: TextStyle(color: Colors.grey, fontSize: 14),
-          titleMedium: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-        ),
+        // You can add more theme customizations here as needed
       );
 
-  static Color get userBubble => Colors.blue[200]!;
-  static Color get aiBubble => Colors.grey[300]!;
-  static Color get chatText => Colors.black87;
+  static Color get userBubble => AppColors.deepPurple.withAlpha((0.2 * 255).round());
+  static Color get aiBubble => AppColors.glassWhite.withAlpha((0.7 * 255).round());
+  static Color get chatText => Colors.white;
 }

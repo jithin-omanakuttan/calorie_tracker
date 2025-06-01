@@ -7,7 +7,7 @@ import 'history_screen.dart';
 import '../theme.dart';
 
 class ChatScreen extends StatelessWidget {
-  const ChatScreen({Key? key}) : super(key: key);
+  const ChatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ChatScreen extends StatelessWidget {
 }
 
 class ChatView extends StatefulWidget {
-  const ChatView({Key? key}) : super(key: key);
+  const ChatView({super.key});
 
   @override
   State<ChatView> createState() => _ChatViewState();

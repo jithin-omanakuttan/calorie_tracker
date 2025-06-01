@@ -62,7 +62,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
                   : null,
               children: [
                 if (totals != null) _buildTotalsRow(totals),
-                ...items.map((it) => _buildItemRow(it)).toList(),
+                ...items.map((it) => _buildItemRow(it)),
               ],
             ),
           );

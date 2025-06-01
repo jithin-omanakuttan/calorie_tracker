@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'db/objectbox.dart';
-import 'screens/chat_screen.dart';
 import 'theme.dart';
+import 'utils/custom_route.dart';
 
 late Store store;
 void main() async {
@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Calorie Chat',
       theme: AppTheme.lightTheme,
-      home: const ChatScreen(),
+      initialRoute: '/',
+      onGenerateRoute: generateRoute,
     );
   }
 }

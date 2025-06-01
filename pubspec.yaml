@@ -22,6 +22,8 @@ dependencies:
   get_it: ^8.0.3
   path_provider: ^2.1.5
   freezed_annotation: ^2.4.4
+  google_fonts: ^6.2.1
+  glassmorphism: ^3.0.0
 
 dev_dependencies:
   flutter_test:
