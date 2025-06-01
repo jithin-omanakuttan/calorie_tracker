@@ -75,7 +75,7 @@ class ChatCubit extends Cubit<ChatState> {
     final totalsBox = store.box<TotalsEntity>();
     store.runInTransaction(TxMode.write, () {
       final mealId = mealBox.put(mealEntity);
-      totalsEntity.meal.target = mealEntity;
+      totalsEntity.meal.targetId = mealId;
       totalsBox.put(totalsEntity);
       for (final it in itemEntities) {
         it.meal.target = mealEntity;
